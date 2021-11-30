@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-color: #efefef;
+  --nav-color: #1876f2;
+  --bg-color: #fff;
+}
+
+body {
+  background: var(--body-color);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 5%;
+}
+
+.left-sidebar {
+  flex-basis: 25%;
+}
+
+.right-sidebar {
+  flex-basis: 25%;
+}
+
+.main-content {
+  flex-basis: 47%;
+}
+.story-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  height: 45px;
+}
+
+.story {
+  flex-basis: 15.5%;
+  padding-top: 32%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px;
+  cursor: pointer;
+}
+
+.story img {
+  position: absolute;
+  width: 45px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  border: 5px solid #1876f2;
+  transition: transform 0.2s;
+}
+.story img:hover {
+  transform: scale(1);
+}
+.story i {
+  position: absolute;
+  width: 45px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  border: 5px solid #1876f2;
+}
+.story p {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.story1 {
+  background-image: url(images/FRANCIS1.png);
+}
+
+.story2 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-2.png);
+}
+.story3 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-3.png);
+}
+.story4 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-4.png);
+}
+.story5 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-5.png);
+}
+.story6 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5)),
+    url(images/status-1.png);
+}
+
+.story.story1 img {
+  top: unset;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  border: 0;
+  width: 35px;
+}
+.story.story6 i {
+  top: unset;
+  left: 3%;
+  bottom: 90px;
+  border-radius: 50%;
+  background-color: white;
+  transform: translateX(-50%);
+  border: 0;
+  width: 35px;
+  box-shadow: 0 1px 1px;
+  width: 40px;
+  height: 40px;
+  margin-left: 100%;
+  text-align: center;
+  padding-top: 11px;
+}
+.story.story6 .arrows {
+  margin-bottom: 50px;
+}
+.write-post-container {
+  width: 100%;
+  margin-top: 1000px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  color: #626262;
+  margin-top: 40px;
+  box-shadow: 0 1px 1px;
+}
+.write-post-container textarea {
+  width: 100%;
+  border: none;
+  padding-top: 15px;
+  padding-left: 8px;
+  outline: 0;
+  text-align: left;
+  border-radius: 20px;
+  background: #e4e6e9;
+  resize: none;
+}
+
+.write-post-container textarea::placeholder {
+  overflow: visible;
+  font-size: 17px;
+}
+.write-post-container hr {
+  margin-top: 7px;
+  border: none;
+  height: 1px;
+  background-color: #e4e6e9;
+  color: #e4e6e9;
+}
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile img {
+  width: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-input-container {
+  padding-left: 55px;
+  padding-top: 20px;
+}
+.write-post-container textarea {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  border-bottom: 1px solid #ccc;
+  background: #e4e6e9;
+  resize: none;
+}
+
+.post-input-container button {
+  align-items: right;
+  justify-content: right;
+  margin-left: 95%;
+  margin-top: 5px;
+  color: black;
+  border: 0;
+  outline: #1876f2;
+  padding: 4px 4px;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #1876f2;
+}
+button:active {
+  background-color: #1876f2;
+}
+.add-post-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.add-post-links a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #626262;
+  margin-right: 30px;
+  font-size: 13px;
+}
+.add-post-links a img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+@media (max-width: 900px) {
+  .left-sidebar {
+    display: none;
+  }
+  .right-sidebar {
+    display: none;
+  }
+  .story-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  .story {
+    flex-basis: 15%;
+    padding-top: 32%;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-top: 160px;
+  }
+  .story.story6 i {
+    top: unset;
+    left: 3%;
+    bottom: 40px;
+    border-radius: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+    border: 0;
+    width: 25px;
+    box-shadow: 0 0 1px 1px;
+    height: 25px;
+    margin-left: 90%;
+    text-align: center;
+    padding-top: 4px;
+  }
+
+  .story img {
+    position: absolute;
+    width: 25px;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+    border: 2px solid #1876f2;
+  }
+
+  .story p {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+  }
+  .story-gallery .story.story1 img {
+    position: absolute;
+    width: 25px;
+    border-radius: 50%;
+    top: 10px;
+    left: 10px;
+  }
+  .story-gallery .story.story1 p {
+    font-size: 12px;
+    color: black;
+    font-weight: bold;
+    background-color: transparent;
+    margin: 30px 2px 0 0;
+    padding: 3px 3px;
+  }
+
+  .write-post-container {
+    display: flex;
+    margin-top: 0px;
+  }
+  .write-post-container .user-profile div {
+    margin-top: 0;
+    margin-left: 2px;
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .write-post-container textarea::placeholder {
+    overflow: visible;
+    font-size: 8px;
+  }
+  .write-post-container .add-post-links {
+    display: none;
+  }
+  .post-input-container button {
+    display: none;
+  }
+  .post-input-container textarea {
+    height: 8px;
+    width: 150px;
+    border: 0;
+    outline: 0;
+    background-color: #fff;
+    resize: none;
+  }
+  .main-content {
+    flex-basis: 95%;
+    width: 100%;
+    padding-right: 1%;
+    margin-right: 30px;
+  }
+}
